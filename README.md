@@ -17,7 +17,6 @@ venv\Scripts\activate           # Windows
 ### 3. Install dependencies
 
 ```bash
-cd backend
 pip install -r requirements.txt
 ```
 
@@ -64,7 +63,7 @@ GRANT ALL PRIVILEGES ON DATABASE bankdb TO bloguser;
 
 #### Set environment variables
 
-Create a `.env` file inside `backend/`:
+Create a `.env` file:
 
 ```
 DATABASE_URL=postgresql://bloguser:yourpassword@localhost:5432/bankdb
@@ -95,6 +94,5 @@ engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 ### 4. Run the backend
 
 ```bash
-cd backend
 uvicorn main:app --reload
 ```
